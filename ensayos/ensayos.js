@@ -69,7 +69,7 @@ temperatura máxima y mínima de cada día */
 // de 20 sables de luz y contabilizar la cantidad de sables que
 // tienen energías menores a 20 Joules.
 
-let sable =
+let sables =
 [
  {color: "Verde", energia: 50, portador: "Obi Wan"},
  {color: "Amarillo", energia: 18, portador: "York M"},
@@ -83,9 +83,19 @@ let sable =
  {color: "Amarillo", energia: 20, portador: "York M"},
 ]
 
-console.log(sable)
+console.log(sables)
 
-sable.forEach(element => {
+let filtradoEnergias = sables.filter(function(sable){
+    return(sable.energia < 20)
+})
+console.log(filtradoEnergias)
+
+filtradoEnergias.forEach(element => {
+    element.energia
+});
+con
+
+sables.forEach(element => {
     let energias = (element.energia < 20)
     console.log(energias)
 });
